@@ -8,10 +8,23 @@ const { Op } = require('sequelize')
 const getVideoGames = async () => {
     try {
         const allDBVideoGames = await Videogame.findAll();
-        const allAPIVideoGames = await axios.get(`${API_URL}/games?key=${API_KEY}`)
+
+        const apiFirstCall = await axios.get(`${API_URL}/games?page=${1}&key=${API_KEY}`);
+        const apiSecondCall = await axios.get(`${API_URL}/games?page=${2}&key=${API_KEY}`);
+        const apiThirdCall = await axios.get(`${API_URL}/games?page=${3}&key=${API_KEY}`);
+        const apiFourthCall = await axios.get(`${API_URL}/games?page=${4}&key=${API_KEY}`);
+        const apiFifthCall = await axios.get(`${API_URL}/games?page=${5}&key=${API_KEY}`);
+        const allAPIVideoGames = [
+            ...apiFirstCall.data.results,
+            ...apiSecondCall.data.results,
+            ...apiThirdCall.data.results,
+            ...apiFourthCall.data.results,
+            ...apiFifthCall.data.results,
+        ];
+
         return [
-            ...allAPIVideoGames.data.results, 
-            ...allDBVideoGames
+            ...allDBVideoGames,
+            ...allAPIVideoGames, 
         ]
     } catch (error) {
         return error
@@ -77,23 +90,24 @@ const getGameById = async (id) => {
     }
 
     const createGame = async (name, description,platforms, image, year_start, rating, genres) => {
-       try {
-        const videogame = await Videogame.create({
-            name: name,
-            description: description,
-            platforms:platforms,
-            image: image,
-            year_start: year_start,
-            rating: rating,
-        })
+        try {
+            const videogame = await Videogame.create({
+                name: name,
+                description: description,
+                platforms:platforms,
+                image: image,
+                year_start: year_start,
+                rating: rating,
+            })
+
             await videogame.addGenre(genres)
 
             videogame.genres = genres
             return videogame
-       } catch (error) {
-        console.log(error)
-        throw new Error(error)
-       }
+        } catch (error) {
+            console.log(error)
+            throw new Error(error)
+        }
     }
 
 module.exports = {
