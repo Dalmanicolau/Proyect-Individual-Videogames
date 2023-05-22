@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap);
+
+.container {
+    width:350px;
+    height:520px;
+    padding:5px;
+    display: inline-flex;
+    margin-bottom: 8em;
+    
+    
+   
+    
+
+}
+
+.card {
+    margin-top: 50px;
+
+}
+
+.card:hover{
+    text-shadow: 0 0 5px rgb(247, 237, 150),
+    0 0 .8px rgb(248, 246, 104),
+    0 0 1px rgb(247, 227, 142),
+    0 0 5px rgb(241, 214, 91),
+    0 0 10px rgb(241, 223, 138),
+    0 0 11px rgb(245, 233, 165),
+    0 0 12px rgb(119, 124, 52),
+    0 0 15px rgb(121, 107, 62),
+    0 0 18px rgb(128, 120, 78);
+}
+
+
+.card h3{
+    font-family: 'Orbitron';
+    font-size: 10x;
+    color:rgb(64, 1, 80);
+}
+.card h5{
+    font-family: 'Orbitron';
+    font-size: 10x;
+    color:rgb(35, 1, 36)
+}
+
+.card h4{
+    font-family: 'Orbitron';
+    font-size: 10x;
+    color:rgb(7, 0, 7)
+}
+
+.card:hover{
+    transform: scale(1.02, 1.02);
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+    transform: scale(1.02, 1.02);
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+}
+
+.img {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #8b3687;
+    font-style: italic;
+}

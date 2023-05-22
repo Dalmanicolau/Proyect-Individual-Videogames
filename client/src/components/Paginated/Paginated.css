@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+* 
+.paginado{
+    display: flex;
+    font: 10px 'Press Start 2P',  cursive;
+    justify-content: center;
+    align-items: center;
+     
+  }
+
+
+  .buttonPaginado{
+    color:#f3ecec;
+   border-radius: 5px;
+    padding: 5px;
+    text-align:center;
+    background: none;
+   
+  }
+
+  .buttonPaginado {
+    font: 10px 'Press Start 2P',  cursive;
+  }
+
+  .buttonPaginado:hover{
+        background-color: #c423b7;
+        background-size: .01px;
+        color: #000203;
+        box-shadow: 0 0 .1px #c00cc0,
+                    0 0 .1px #ad20b2,
+                    0 0 20px #b220ab,
+                    0 0 20px #b220ab;
+    
+  }
+
+.buttonPaginado:focus{
+background-color:#7f018b;
+cursor: pointer;
+}
