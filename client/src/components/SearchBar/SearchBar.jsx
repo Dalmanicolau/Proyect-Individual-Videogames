@@ -19,7 +19,7 @@ const SearchBar = () => {
     return(
         <div>
             <input type="text" placeholder= "Buscar..." onChange={(event) => handlerInputChange(event)}/>
-            <button type="submit" onClick={(event) => handlerSubmit(event)}>Buscar</button>
+            <button className="button" type="submit" onClick={(event) => handlerSubmit(event)}>Search Game</button>
         </div>
     )
 }

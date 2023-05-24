@@ -2,21 +2,17 @@
 @import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap);
 
 .container {
-    width:350px;
-    height:520px;
+    width:200px;
+    height:400px;
     padding:5px;
     display: inline-flex;
-    margin-bottom: 8em;
-    
-    
-   
-    
-
+    margin-bottom: 5em;
+    margin-left: 20px;
+    justify-content: space-between;
+    transform: translate(7%, 0);
 }
-
 .card {
-    margin-top: 50px;
-
+    margin-top: 30%;
 }
 
 .card:hover{
@@ -31,31 +27,32 @@
     0 0 18px rgb(128, 120, 78);
 }
 
-
 .card h3{
     font-family: 'Orbitron';
     font-size: 10x;
-    color:rgb(64, 1, 80);
+    color:rgb(220, 128, 243);
 }
 .card h5{
     font-family: 'Orbitron';
     font-size: 10x;
-    color:rgb(35, 1, 36)
+    color:rgb(35, 1, 36);
+    line-height: 0px;
+    display:inline-flex;
 }
 
 .card h4{
     font-family: 'Orbitron';
     font-size: 10x;
-    color:rgb(7, 0, 7)
+    color:rgb(7, 0, 7);
+    line-height: 0px;
 }
 
 .card:hover{
-    transform: scale(1.02, 1.02);
+    transform: scale(1.20, 1.20);
     transition-timing-function: ease-out;
     transition-duration: 150ms;
-    transform: scale(1.02, 1.02);
-    transition-timing-function: ease-out;
-    transition-duration: 150ms;
+    border-radius: 2px;
+
 }
 
 .img {

@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Press+Start+2P&display=swap);
+
+#background3{
+    background-image: url("https://www.todofondos.net/wp-content/uploads/hermoso-fondo-de-pantalla-4k-para-su-escritorio.png");
+    background-size: 300vh;
+    margin-top: -30px;
+    margin-bottom: -100%;
+    background-repeat: no-repeat;
+}
+
+
+.name{
+    font-family: 'Press Start 2P',  cursive;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(241, 231, 239);
+}
+
+.description{
+    font-family: 'Orbitron';
+    font-size: 10x;
+    color:rgb(238, 222, 241);
+}
+
+.platform{
+        font-family: 'Orbitron';
+        font-size: 10x;
+        color:rgb(238, 222, 241);
+        display: inline-flex;
+    }
+
+.idnum{
+    font-family: 'Orbitron';
+    font-size: 10x;
+    color:rgb(243, 193, 245);
+    line-height: 0px;
+}
+
+
+
+.idnum::hover{
+    text-shadow: 0 0 5px rgb(247, 237, 150),
+    0 0 .8px rgb(248, 246, 104),
+    0 0 1px rgb(247, 227, 142),
+    0 0 5px rgb(241, 214, 91),
+    0 0 10px rgb(241, 223, 138),
+    0 0 11px rgb(245, 233, 165),
+    0 0 12px rgb(119, 124, 52),
+    0 0 15px rgb(121, 107, 62),
+    0 0 18px rgb(128, 120, 78);
+}
+
+.idnum:hover{
+    transform: scale(1.20, 1.20);
+    transition-timing-function: ease-out;
+    transition-duration: 150ms;
+    border-radius: 2px;
+
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #8b3687;
+    font-style: italic;
+}

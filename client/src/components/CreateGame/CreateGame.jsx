@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { createVideogame, getGenres } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import validation from '../validation'
+import './CreateGame.css'
 
 const CreateGame = () => {
     const dispatch = useDispatch();
@@ -88,19 +89,19 @@ const handlerSubmit = (event) => {
 
     return(
         <div>
-            <Link to= 'home'><button>Volver</button></Link>
-            <h1>Crea tu Juego!</h1>
+            <Link to= 'home'><button className='button' >Back</button></Link>
+            <h1 className='title1'>Create your game!</h1>
             <form onSubmit={(event) => handlerSubmit(event)}>
                 <div>
                     <div>
                         <label>Nombre:</label>
                         <input type= "text" value= {input.name} name="name" onChange={(event) =>handlerChange(event)}></input>
-                        {errors.name ? <p>{errors.name}</p>:''}
+                        {errors.name ? <p className= 'error'>{errors.name}</p>:''}
                     </div>
                     <div>
                         <label>Description:</label>
                         <input type= "text" value= {input.description} name="description" onChange={(event) =>handlerChange(event)}></input>
-                        {errors.description ? <p>{errors.description}</p>:''}
+                        {errors.description ? <p className= 'error'>{errors.description}</p>:''}
                     </div>
                     <div>
                         <label>Platform:</label>
@@ -117,9 +118,10 @@ const handlerSubmit = (event) => {
                     <div>
                         <label>Rating:</label>
                         <input type= "number" value= {input.rating} name="rating"onChange={(event) =>handlerChange(event)}></input>
-                        {errors.rating? <p>{errors.rating}</p>:''}
+                        {errors.rating? <p className= 'error'>{errors.rating}</p>:''}
                     </div>
                     <div>
+                        <label>Genero:</label>
                         <select onChange={(event) =>handleSelect(event)}>
                             {
                                 genres.map((genre) => {
@@ -130,7 +132,7 @@ const handlerSubmit = (event) => {
                         {errors.rating? <p>{errors.rating}</p>:''}
                         <ul><li>{genresToShow.map(genre => genre + " ,")}</li></ul>
                     </div>
-                    <button disabled= {errors.name || errors.rating
+                    <button className='button2' disabled= {errors.name || errors.rating
                 || errors.description || !input.platforms} type= "submit">Crear Personaje</button>
                 </div>
             </form>
